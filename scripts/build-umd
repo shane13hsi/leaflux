@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+`npm bin`/webpack src/index.js dist/library-boilerplate.js
+NODE_ENV=production `npm bin`/webpack src/index.js dist/library-boilerplate.min.js
