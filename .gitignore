@@ -3,6 +3,6 @@ node_modules
 .DS_Store
 dist
 lib
+test-es5
 coverage
-out
 .idea

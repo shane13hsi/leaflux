@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+`npm bin`/babel test --out-dir test-es5
+
+sed -i -- "s/[[:<:]]src[[:>:]]/lib/g" ./test-es5/*.spec.js

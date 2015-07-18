@@ -1,5 +1,6 @@
 export default function transmitter() {
-  const subscriptions = [];
+  // TODO: 生命周期？
+  let subscriptions = [];
 
   const unsubscribe = (onChange) => {
     const idx = subscriptions.indexOf(onChange);

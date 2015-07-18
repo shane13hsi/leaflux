@@ -3,6 +3,7 @@ import transmitter from '../src/transmitter';
 import sinon from 'sinon';
 
 describe('transmitter', () => {
+
   it('存在方法 subscribe push unsubscribe', () => {
     const bus = transmitter();
     assert.isFunction(bus.subscribe);
