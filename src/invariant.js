@@ -3,7 +3,7 @@ let __DEV__ = process.env.NODE_ENV !== 'production';
 export default function(condition, format, a, b, c, d, e, f) {
   if (__DEV__) {
     if (format === undefined) {
-      throw new Error('inletiant requires an error message argument');
+      throw new Error('invariant requires an error message argument');
     }
   }
 
@@ -18,12 +18,12 @@ export default function(condition, format, a, b, c, d, e, f) {
       let args = [a, b, c, d, e, f];
       let argIndex = 0;
       error = new Error(
-        'Inletiant Violation: ' +
+        'invariant Violation: ' +
         format.replace(/%s/g, () => args[argIndex++])
       );
     }
 
-    error.framesToPop = 1; // we don't care about inletiant's own frame
+    error.framesToPop = 1; // we don't care about invariant's own frame
     throw error;
   }
 }
