@@ -162,10 +162,10 @@ class Dispatcher {
    * @internal
    * */
   _startDispatching(payload) {
-    for (var id in this._callbacks) {
+    Object.keys(this._callbacks).forEach(id => {
       this._isPending[id] = false;
       this._isHandled[id] = false;
-    }
+    });
     this._pendingPayload = payload;
     this._isDispatching = true;
   }
