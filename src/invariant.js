@@ -1,6 +1,6 @@
-let __DEV__ = process.env.NODE_ENV !== 'production';
-
 export default function(condition, format, a, b, c, d, e, f) {
+  let __DEV__ = process.env.NODE_ENV !== 'production';
+
   if (__DEV__) {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
