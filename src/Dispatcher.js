@@ -12,7 +12,7 @@ const _prefix = 'ID_';
  *  1) 回调并不会订阅特定的事件。每一个 payload 都会分派给所有注册的回调。
  *  2) 回调会被整个或者部分延迟，以等待其他回调执行完毕。
  * */
-class Dispatcher {
+export default class Dispatcher {
 
   constructor() {
     /**
@@ -46,7 +46,7 @@ class Dispatcher {
    * 返回一个 token，被 `waitFor()` 会用到
    *
    * @param {function} callback
-   * @return {string}
+   * @return {string} id
    * */
   register(callback) {
     let id = _prefix + this._lastID++;
